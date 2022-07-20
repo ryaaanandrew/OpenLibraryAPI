@@ -36,6 +36,11 @@ Object {
         <div
           class="bookItem__bookCoverPlaceholder"
         >
+          <h2
+            class="bookItem__placeHolder"
+          >
+            Pokemon
+          </h2>
           <img
             alt="Book cover for Pokemon"
             class="bookItem__bookCover"
@@ -66,6 +71,11 @@ Object {
         <div
           class="bookItem__bookCoverPlaceholder"
         >
+          <h2
+            class="bookItem__placeHolder"
+          >
+            Pokemon-e TCG
+          </h2>
           <img
             alt="Book cover for Pokemon-e TCG"
             class="bookItem__bookCover"
@@ -96,6 +106,11 @@ Object {
         <div
           class="bookItem__bookCoverPlaceholder"
         >
+          <h2
+            class="bookItem__placeHolder"
+          >
+            POKEMON Goo Malbuch
+          </h2>
           <img
             alt="Book cover for POKEMON Goo Malbuch"
             class="bookItem__bookCover"
@@ -154,6 +169,11 @@ Object {
       <div
         class="bookItem__bookCoverPlaceholder"
       >
+        <h2
+          class="bookItem__placeHolder"
+        >
+          Pokemon
+        </h2>
         <img
           alt="Book cover for Pokemon"
           class="bookItem__bookCover"
@@ -184,6 +204,11 @@ Object {
       <div
         class="bookItem__bookCoverPlaceholder"
       >
+        <h2
+          class="bookItem__placeHolder"
+        >
+          Pokemon-e TCG
+        </h2>
         <img
           alt="Book cover for Pokemon-e TCG"
           class="bookItem__bookCover"
@@ -214,6 +239,11 @@ Object {
       <div
         class="bookItem__bookCoverPlaceholder"
       >
+        <h2
+          class="bookItem__placeHolder"
+        >
+          POKEMON Goo Malbuch
+        </h2>
         <img
           alt="Book cover for POKEMON Goo Malbuch"
           class="bookItem__bookCover"
