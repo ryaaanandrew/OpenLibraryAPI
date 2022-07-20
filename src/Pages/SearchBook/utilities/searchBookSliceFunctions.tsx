@@ -10,7 +10,7 @@ export const fetchBooksListAction =
       dispatch(SearchBookActions.initiateFetchBooks());
 
       const result = await fetch(
-        `http://openlibrary.org/search.json?q=${queryQuote}&limit=20`
+        `https://openlibrary.org/search.json?q=${queryQuote}&limit=20`
       )
         .then((res) => {
           if (res.status === 200) return res.json();
