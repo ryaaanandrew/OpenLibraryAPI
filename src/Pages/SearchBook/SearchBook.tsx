@@ -41,7 +41,11 @@ const SearchBook = () => {
         />
       </form>
 
-      <BookList data={bookList} isLoading={isLoading} />
+      <BookList
+        data={bookList}
+        isLoading={isLoading}
+        searchQuery={searchQuery}
+      />
     </div>
   );
 };

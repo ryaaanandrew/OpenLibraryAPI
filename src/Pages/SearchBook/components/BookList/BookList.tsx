@@ -1,13 +1,14 @@
-import { useEffect, useState } from "react";
-import { sortBy, orderBy } from "lodash";
+import { useState } from "react";
+import { orderBy } from "lodash";
 import styles from "../BookList/BookList.module.scss";
 import moment from "moment";
 
-const BookList: React.FC<{ data: any; isLoading: boolean }> = ({
-  data,
-  isLoading,
-}) => {
-  const [sortMethod, setSortMethod] = useState("");
+const BookList: React.FC<{
+  data: any;
+  isLoading: boolean;
+  searchQuery: string;
+}> = ({ data, isLoading, searchQuery }) => {
+  const [sortMethod, setSortMethod] = useState<string>("");
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
   const {
     bookItem,
@@ -32,6 +33,9 @@ const BookList: React.FC<{ data: any; isLoading: boolean }> = ({
   };
 
   if (isLoading) return <h1>Loading...</h1>;
+
+  if (searchQuery === "" && data.length === 0)
+    return <h1>Use the search bar to search for a book</h1>;
 
   return (
     <>
