@@ -6,6 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <input
+        aria-required="true"
         class="customInput"
         name="search"
         placeholder="Search here"
@@ -16,6 +17,7 @@ Object {
   </body>,
   "container": <div>
     <input
+      aria-required="true"
       class="customInput"
       name="search"
       placeholder="Search here"

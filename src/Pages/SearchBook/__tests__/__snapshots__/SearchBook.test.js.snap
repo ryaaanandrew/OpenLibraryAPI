@@ -17,6 +17,7 @@ Object {
             for="search"
           >
             <input
+              aria-required="true"
               class="customInput"
               name="search"
               placeholder="Search here"
@@ -51,6 +52,7 @@ Object {
           for="search"
         >
           <input
+            aria-required="true"
             class="customInput"
             name="search"
             placeholder="Search here"
