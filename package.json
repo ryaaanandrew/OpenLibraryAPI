@@ -2,6 +2,7 @@
   "name": "bmo-tech-assessment",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ryaaanandrew.github.io/OpenLibraryAPI",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",
     "@testing-library/jest-dom": "^5.14.1",
@@ -12,6 +13,7 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "cypress": "^10.3.1",
+    "gh-pages": "^4.0.0",
     "lodash": "^4.17.21",
     "moment": "^2.29.4",
     "react": "^18.2.0",
@@ -26,6 +28,8 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
