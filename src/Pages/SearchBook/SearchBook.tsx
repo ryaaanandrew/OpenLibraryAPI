@@ -1,5 +1,5 @@
-import { useState, useMemo, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import CustomInput from "../../components/Custominput/CustomInput";
 import { useAppDispatch } from "../../redux/store/configureStore";
@@ -23,7 +23,7 @@ const SearchBook = () => {
   };
 
   return (
-    <div className={container}>
+    <div className={container} test-id={"searchBook-container"}>
       <h1>Open Library Search Tool</h1>
       <form onSubmit={(e: any) => handleSearch(e)}>
         <label htmlFor="search">
@@ -41,7 +41,7 @@ const SearchBook = () => {
         />
       </form>
 
-      {isLoading ? <h1>Loading...</h1> : <BookList data={bookList} />}
+      <BookList data={bookList} isLoading={isLoading} />
     </div>
   );
 };

@@ -3,7 +3,10 @@ import { sortBy, orderBy } from "lodash";
 import styles from "../BookList/BookList.module.scss";
 import moment from "moment";
 
-const BookList: React.FC<{ data: any }> = ({ data }) => {
+const BookList: React.FC<{ data: any; isLoading: boolean }> = ({
+  data,
+  isLoading,
+}) => {
   const [sortMethod, setSortMethod] = useState("");
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
   const {
@@ -27,6 +30,8 @@ const BookList: React.FC<{ data: any }> = ({ data }) => {
 
     setSortMethod(name);
   };
+
+  if (isLoading) return <h1>Loading...</h1>;
 
   return (
     <>
