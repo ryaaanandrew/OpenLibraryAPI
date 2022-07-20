@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { sortBy, orderBy } from "lodash";
 import styles from "../BookList/BookList.module.scss";
+import moment from "moment";
 
 const BookList: React.FC<{ data: any }> = ({ data }) => {
   const [sortMethod, setSortMethod] = useState("");
@@ -35,19 +36,19 @@ const BookList: React.FC<{ data: any }> = ({ data }) => {
         <>
           <div className={toolBar}>
             <div className={toolBar__item} onClick={() => handleSort("title")}>
-              <h2> Sort Alphabetically</h2>
+              <h2>Sort by title</h2>
             </div>
             <div
               className={toolBar__item}
               onClick={() => handleSort("publishDate")}
             >
-              <h2> Sort By Publication Date</h2>
+              <h2>Sort by date</h2>
             </div>
             <div
               className={toolBar__item}
               onClick={() => handleSort("authorName")}
             >
-              <h2> Sort By Author</h2>
+              <h2>Sort by author</h2>
             </div>
           </div>
           {sortedData.map((item: any) => {
@@ -64,7 +65,10 @@ const BookList: React.FC<{ data: any }> = ({ data }) => {
                 <div className={bookItem__details}>
                   <h3>Title: {item.title}</h3>
                   <h3>Author: {item.author_name?.[0]}</h3>
-                  <h3>Publish : {item.publishDate}</h3>
+                  <h3>
+                    Publication Date:{" "}
+                    {moment(item.publishDate).format("MMM, DD, YYYY")}
+                  </h3>
                 </div>
               </div>
             );

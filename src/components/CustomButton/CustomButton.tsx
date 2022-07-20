@@ -17,6 +17,7 @@ const CustomButton: React.FC<ICustomButton> = ({
       className={styles.customButton}
       onChange={(e) => handleChange && handleChange(e)}
       style={{ ...extraStyles }}
+      test-id={"customButton-id"}
     >
       {label}
     </button>
