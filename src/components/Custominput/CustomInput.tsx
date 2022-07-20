@@ -27,6 +27,7 @@ const CustomInput: React.FC<ICustomInput> = ({
       placeholder={placeholder}
       style={{ ...extraStyles }}
       test-id={"CustomInput-id"}
+      aria-required={true}
     />
   );
 };
