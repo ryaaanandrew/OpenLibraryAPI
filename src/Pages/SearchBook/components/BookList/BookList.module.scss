@@ -43,11 +43,17 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
   }
 
   &__bookCover {
     z-index: 10;
     height: 234px;
+  }
+
+  &__placeHolder {
+    position: absolute;
+    font-weight: normal;
   }
 
   &__bookCover,

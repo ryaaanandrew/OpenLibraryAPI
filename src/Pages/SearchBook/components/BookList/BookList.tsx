@@ -15,6 +15,7 @@ const BookList: React.FC<{
     bookItem__bookCoverPlaceholder,
     bookItem__bookCover,
     bookItem__details,
+    bookItem__placeHolder,
     toolBar,
     toolBar__item,
   } = styles;
@@ -64,6 +65,7 @@ const BookList: React.FC<{
             return (
               <div key={item.key} className={bookItem}>
                 <div className={bookItem__bookCoverPlaceholder}>
+                  <h2 className={bookItem__placeHolder}>{item.title}</h2>
                   <img
                     src={`https://covers.openlibrary.org/b/isbn/${item.isbn?.[0]}-M.jpg`}
                     alt={`Book cover for ${item.title}`}
